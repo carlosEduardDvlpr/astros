@@ -15,7 +15,7 @@ export const routes = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: '/planets',
+        path: '/planets/:id',
         element: <PlanetsPage />,
       },
     ],
