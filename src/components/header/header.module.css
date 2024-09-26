@@ -1,0 +1,56 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 2rem 8rem;
+  box-shadow: 0 0.1px 10px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  button {
+    font-size: 1rem;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.navegation {
+  position: fixed;
+  right: 0;
+  overflow: auto;
+  background-color: black;
+  top: 70px;
+  height: calc(100vh - 70px);
+  width: 250px;
+  border-left: 2px solid rgb(255, 255, 255);
+  color: white;
+  animation: open 0.1s linear;
+  ul {
+    list-style: none;
+    a {
+      text-decoration: none;
+    }
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      padding: 1rem;
+      &:hover {
+        cursor: pointer;
+        background-color: rgb(26, 25, 25);
+      }
+    }
+  }
+}
+
+@keyframes open {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 250px;
+  }
+}
