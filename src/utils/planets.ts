@@ -49,7 +49,7 @@ export const planetsInfo = {
     description:
       'O planeta Terra é o maior dentre os quatro planetas rochosos que fazem parte do Sistema Solar.<br>A Terra possui sua estrutura interna dividida em: crosta terrestre, manto e núcleo. Além da estrutura interna, há também a externa que corresponde à litosfera, hidrosfera, biosfera e atmosfera, que oferecem as condições favoráveis para a existência de vida.',
   },
-  merte: {
+  marte: {
     id: 'marte',
     color: 'rgb(255, 51, 0)',
     imgPath: '/asset/planets/mars.png',

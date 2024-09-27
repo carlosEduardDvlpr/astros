@@ -14,10 +14,16 @@
       cursor: pointer;
     }
   }
+  @media (max-width: 900px) {
+    & {
+      padding: .5rem 1.5rem;
+    }
+  }
 }
 
 .navegation {
   position: fixed;
+  z-index: 2 !important;
   right: 0;
   overflow: auto;
   background-color: black;
