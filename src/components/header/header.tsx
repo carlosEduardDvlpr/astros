@@ -10,6 +10,7 @@ import uranusImage from '../../assets/planets/uranus.png';
 import neptuneImage from '../../assets/planets/neptune.png';
 import styles from './header.module.css';
 import { Link } from 'react-router-dom';
+import { usePlanetsContext } from '../../context/planets-context';
 
 const imagesPlanets = [
   { name: 'sol', image: sunImage },
@@ -24,7 +25,7 @@ const imagesPlanets = [
 ];
 
 export default function Header() {
-  const [toggle, setToggle] = React.useState(false);
+  const { setToggle, toggle } = usePlanetsContext();
 
   function handleToggle() {
     setToggle(!toggle);
@@ -40,8 +41,8 @@ export default function Header() {
         <nav className={styles.navegation}>
           <ul>
             {imagesPlanets.map((planet) => (
-              <Link to={'/planets/' + planet.name}>
-                <li key={planet.name}>
+              <Link key={planet.name} to={'/planets/' + planet.name}>
+                <li>
                   <p>{planet.name}</p>
                   <img src={planet.image} alt={planet.name} width={60} />
                 </li>
