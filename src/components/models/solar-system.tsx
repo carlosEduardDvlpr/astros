@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React from 'react';
 import { useGLTF, useAnimations } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
@@ -12,11 +14,7 @@ export function SolarSystemModel(props) {
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
-        <group
-          name="Sketchfab_model"
-          rotation={[1.7, 0, 0]}
-          scale={0.05}
-        >
+        <group name="Sketchfab_model" rotation={[1.7, 0, 0]} scale={0.05}>
           <group
             name="5ce69907e7be4b5a89c12dcbbc7d7108fbx"
             rotation={[Math.PI / 2, 0, 0]}

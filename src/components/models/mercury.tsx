@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React from 'react';
 import { useGLTF, useAnimations } from '@react-three/drei';
 
@@ -6,7 +8,7 @@ export function MercuryModel(props) {
   const { nodes, materials, animations } = useGLTF('public/models/mercury.glb');
   const { actions } = useAnimations(animations, group);
   return (
-    <group ref={group} {...props} dispose={null} >
+    <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
           <group

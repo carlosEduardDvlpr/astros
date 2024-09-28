@@ -5,7 +5,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { MercuryModel } from '../../components/models/mercury';
 import { VenusModel } from '../../components/models/venus';
-import { EarthModel } from '../../components/models/earth';
+import { EarthModel } from '../../components/models/earth.js';
 import { MarsModel } from '../../components/models/mars';
 import { JupiterModel } from '../../components/models/jupiter';
 import { SaturnModel } from '../../components/models/saturn';

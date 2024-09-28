@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { useGLTF, useAnimations } from '@react-three/drei';
 

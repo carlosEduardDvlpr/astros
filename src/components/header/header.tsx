@@ -1,4 +1,3 @@
-import React from 'react';
 import sunImage from '../../assets/planets/sun.png';
 import mercuryImage from '../../assets/planets/mercury.png';
 import venusImage from '../../assets/planets/venus.png';
