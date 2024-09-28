@@ -1,4 +1,4 @@
-import { Outlet, useLocation, useSearchParams } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Header from './components/header';
 import Preload from './components/preload/preload';
 import React from 'react';

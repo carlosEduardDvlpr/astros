@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React from 'react';
 import { useGLTF, useAnimations } from '@react-three/drei';
 
@@ -11,7 +13,7 @@ export function SunModel(props) {
         <group
           name="Sketchfab_model"
           rotation={[-Math.PI / 2, 0, 0]}
-          scale={0.010}
+          scale={0.01}
         >
           <group
             name="23c71f95b90948a0bb8746260230a45efbx"

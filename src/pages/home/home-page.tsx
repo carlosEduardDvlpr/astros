@@ -1,6 +1,5 @@
 import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-import styles from './home-page.module.css';
 import { SolarSystemModel } from '../../components/models/solar-system';
 import useMedia from '../../hooks/useMedia';
 import { usePlanetsContext } from '../../context/planets-context';
