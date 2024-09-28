@@ -1,3 +1,9 @@
+import { Link } from 'react-router-dom';
+
 export default function ErrorPage() {
-  return <div>error-page</div>;
+  return (
+    <main style={{ justifyContent: 'center' }}>
+      <Link to={'/planets/Sun'}>Voltar para home</Link>
+    </main>
+  );
 }
