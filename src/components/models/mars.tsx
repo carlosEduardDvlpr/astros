@@ -5,7 +5,9 @@ import { useGLTF, useAnimations } from '@react-three/drei';
 
 export function MarsModel(props) {
   const group = React.useRef();
-  const { nodes, materials, animations } = useGLTF('public/models/mars.glb');
+  const { nodes, materials, animations } = useGLTF(
+    'https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/mars.glb',
+  );
   const { actions } = useAnimations(animations, group);
   return (
     <group ref={group} {...props} dispose={null}>
@@ -43,4 +45,6 @@ export function MarsModel(props) {
   );
 }
 
-useGLTF.preload('public/models/mars.glb');
+useGLTF.preload(
+  'https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/mars.glb',
+);

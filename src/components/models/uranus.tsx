@@ -3,7 +3,9 @@
 import { useGLTF } from '@react-three/drei';
 
 export function UranusModel(props) {
-  const { nodes, materials } = useGLTF('public/models/uranus.glb');
+  const { nodes, materials } = useGLTF(
+    'https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/uranus.glb',
+  );
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
@@ -17,4 +19,6 @@ export function UranusModel(props) {
   );
 }
 
-useGLTF.preload('public/models/uranus.glb');
+useGLTF.preload(
+  'https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/uranus.glb',
+);

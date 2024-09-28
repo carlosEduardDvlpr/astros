@@ -5,7 +5,7 @@ import { useGLTF, useAnimations } from '@react-three/drei';
 
 export function SunModel(props) {
   const group = React.useRef();
-  const { nodes, materials, animations } = useGLTF('public/models/sun.glb');
+  const { nodes, materials, animations } = useGLTF('https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/sun.glb');
   const { actions } = useAnimations(animations, group);
   return (
     <group ref={group} {...props} dispose={null}>
@@ -46,4 +46,4 @@ export function SunModel(props) {
   );
 }
 
-useGLTF.preload('public/models/sun.glb');
+useGLTF.preload('https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/sun.glb');

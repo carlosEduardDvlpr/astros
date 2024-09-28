@@ -5,7 +5,7 @@ import { useGLTF, useAnimations } from '@react-three/drei';
 
 export function JupiterModel(props) {
   const group = React.useRef();
-  const { nodes, materials, animations } = useGLTF('public/models/jupiter.glb');
+  const { nodes, materials, animations } = useGLTF('https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/jupiter.glb');
   const { actions } = useAnimations(animations, group);
   return (
     <group ref={group} {...props} dispose={null}>
@@ -43,4 +43,4 @@ export function JupiterModel(props) {
   );
 }
 
-useGLTF.preload('public/models/jupiter.glb');
+useGLTF.preload('https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/jupiter.glb');

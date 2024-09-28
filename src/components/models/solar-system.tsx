@@ -7,7 +7,7 @@ import { useFrame } from '@react-three/fiber';
 export function SolarSystemModel(props) {
   const group = React.useRef();
   const { nodes, materials, animations } = useGLTF(
-    'public/models/solar-system.glb',
+    'https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/solar-system.glb',
   );
   const { actions } = useAnimations(animations, group);
 
@@ -318,4 +318,4 @@ export function SolarSystemModel(props) {
   );
 }
 
-useGLTF.preload('public/models/solar-system.glb');
+useGLTF.preload('https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/solar-system.glb');

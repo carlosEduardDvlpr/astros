@@ -5,7 +5,7 @@ import { useGLTF, useAnimations } from '@react-three/drei';
 
 export function MercuryModel(props) {
   const group = React.useRef();
-  const { nodes, materials, animations } = useGLTF('public/models/mercury.glb');
+  const { nodes, materials, animations } = useGLTF('https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/mercury.glb');
   const { actions } = useAnimations(animations, group);
   return (
     <group ref={group} {...props} dispose={null}>
@@ -43,4 +43,4 @@ export function MercuryModel(props) {
   );
 }
 
-useGLTF.preload('public/models/mercury.glb');
+useGLTF.preload('https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/mercury.glb');

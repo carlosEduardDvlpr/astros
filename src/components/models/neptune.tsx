@@ -4,7 +4,7 @@ import { useGLTF, useAnimations } from '@react-three/drei';
 
 export function NeptuneModel(props) {
   const group = React.useRef();
-  const { nodes, materials, animations } = useGLTF('public/models/neptune.glb');
+  const { nodes, materials, animations } = useGLTF('https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/neptune.glb');
   const { actions } = useAnimations(animations, group);
   return (
     <group ref={group} {...props} dispose={null}>
@@ -42,4 +42,4 @@ export function NeptuneModel(props) {
   );
 }
 
-useGLTF.preload('public/models/neptune.glb');
+useGLTF.preload('https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/neptune.glb');

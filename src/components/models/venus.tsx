@@ -5,7 +5,9 @@ import { useGLTF, useAnimations } from '@react-three/drei';
 
 export function VenusModel(props) {
   const group = React.useRef();
-  const { nodes, materials, animations } = useGLTF('public/models/venus.glb');
+  const { nodes, materials, animations } = useGLTF(
+    'https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/venus.glb',
+  );
   const { actions } = useAnimations(animations, group);
   return (
     <group ref={group} {...props} dispose={null}>
@@ -43,4 +45,6 @@ export function VenusModel(props) {
   );
 }
 
-useGLTF.preload('public/models/venus.glb');
+useGLTF.preload(
+  'https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/venus.glb',
+);
