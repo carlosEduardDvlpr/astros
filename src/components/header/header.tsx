@@ -33,7 +33,9 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <h1>Astros</h1>
+      <Link to={'/'} style={{ textDecoration: 'none' }}>
+        <h1>Astros</h1>
+      </Link>
       <button onClick={handleToggle}>
         {toggle ? 'Ver menos...' : 'Ver todos os planetas'}
       </button>
