@@ -1,12 +1,11 @@
-import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function UranusModel(props) {
   const { nodes, materials } = useGLTF('public/models/uranus.glb')
   return (
     <group {...props} dispose={null}>
-      <group scale={0.01}>
-        <mesh geometry={nodes.Esfera_URANO_0.geometry} material={materials.URANO} position={[-53.915, 175.759, 95.362]} />
+      <group rotation={[-Math.PI / 2, 0, 0]}>
+        <mesh geometry={nodes.Object_3.geometry} material={materials.moon} position={[0, -1.924, -0.169]} />
       </group>
     </group>
   )

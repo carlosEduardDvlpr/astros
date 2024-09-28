@@ -12,13 +12,12 @@ export function MarsModel(props) {
           <group
             name="656dac23814e461180cce73bdfc761ecfbx"
             rotation={[Math.PI / 2, 0, 0]}
-            scale={13}
+            scale={0.0033}
           >
             <group name="Object_2">
               <group name="RootNode">
                 <group
                   name="4_mars"
-                  position={[0, 0, 693175.938]}
                   rotation={[-Math.PI / 2, -0.436, 0]}
                   scale={140}
                 >

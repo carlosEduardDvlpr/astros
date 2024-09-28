@@ -23,3 +23,11 @@ button {
   background: initial;
   border: initial;
 }
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100vh - 70px);
+ 
+}
