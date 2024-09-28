@@ -6,6 +6,7 @@
   position: absolute;
   width: 100%;
   height: 100vh;
+  cursor: progress;
   z-index: 222;
   top: 0;
   left: 0;

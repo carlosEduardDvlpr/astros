@@ -45,7 +45,7 @@ export default function PlanetsPage() {
           {CurrentPlanetInfo?.name}
         </h1>{' '}
         {media <= 900 ? (
-          <details>
+          <details style={{ cursor: 'pointer' }}>
             <summary>Mais informações</summary>
             <p>{CurrentPlanetInfo?.description}</p>
 
