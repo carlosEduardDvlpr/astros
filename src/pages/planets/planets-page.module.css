@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  height: calc(100vh - 70px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 8rem;
+  @media (max-width: 800px) {
+    display: block;
+    padding-inline: 1rem;
+  }
+}
+
+.planets {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 30%;
+  ul {
+    margin-left: 1rem;
+  }
+  @media (max-width: 800px) {
+    width: 90%;
+  }
+}
+
+.planets_title {
+  font-size: 2rem;
+}

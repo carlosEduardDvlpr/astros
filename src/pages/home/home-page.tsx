@@ -8,26 +8,21 @@ import { usePlanetsContext } from '../../context/planets-context';
 export default function HomePage() {
   const media = useMedia();
   const { toggle } = usePlanetsContext();
-  console.log(media);
   return (
-    <>
-      <main className={styles.planets}>
-        <Canvas
-          fallback={'Carregando modelo 3D..'}
-          style={{ zIndex: `${toggle ? -1 : 1}` }}
-        >
-          <ambientLight intensity={6} />
-          <OrbitControls
-            minDistance={media > 1000 ? 3 : 10}
-            maxDistance={media > 1000 ? 8 : 12}
-            enableZoom={true}
-            autoRotate={true}
-            autoRotateSpeed={1}
-            enablePan={false}
-          />
-          <SolarSystemModel />
-        </Canvas>
-      </main>
-    </>
+    <Canvas
+      fallback={'Carregando modelo 3D..'}
+      style={{ zIndex: `${toggle ? -1 : 1}`}}
+    >
+      <ambientLight intensity={0} />
+      <OrbitControls
+        minDistance={media > 1000 ? 4 : 10}
+        maxDistance={media > 1000 ? 6 : 12}
+        enableZoom={true}
+        autoRotate={true}
+        autoRotateSpeed={1}
+        enablePan={false}
+      />
+      <SolarSystemModel />
+    </Canvas>
   );
 }

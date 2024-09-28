@@ -18,9 +18,8 @@ export function NeptuneModel(props) {
               <group name="RootNode">
                 <group
                   name="9_neptune001"
-                  position={[0, 0, 1496170]}
                   rotation={[-Math.PI / 2, -0.494, 0]}
-                  scale={1000}
+                  scale={50}
                 >
                   <mesh
                     name="9_neptune001_neptune_shader_0"

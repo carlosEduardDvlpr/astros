@@ -13,15 +13,15 @@ import { Link } from 'react-router-dom';
 import { usePlanetsContext } from '../../context/planets-context';
 
 const imagesPlanets = [
-  { name: 'sol', image: sunImage },
-  { name: 'mercurio', image: mercuryImage },
-  { name: 'venus', image: venusImage },
-  { name: 'terra', image: earthImage },
-  { name: 'marte', image: marsImage },
-  { name: 'jupiter', image: jupiterImage },
-  { name: 'saturno', image: saturnImage },
-  { name: 'urano', image: uranusImage },
-  { name: 'netuno', image: neptuneImage },
+  { link: 'Sun', name: 'Sol', image: sunImage },
+  { link: 'Mercury', name: 'Mercúrio', image: mercuryImage },
+  { link: 'Venus', name: 'Venus', image: venusImage },
+  { link: 'Earth', name: 'Terra', image: earthImage },
+  { link: 'Mars', name: 'Marte', image: marsImage },
+  { link: 'Jupiter', name: 'Júpiter', image: jupiterImage },
+  { link: 'Saturn', name: 'Saturno', image: saturnImage },
+  { link: 'Uranus', name: 'Urano', image: uranusImage },
+  { link: 'Neptune', name: 'Netuno', image: neptuneImage },
 ];
 
 export default function Header() {
@@ -41,7 +41,7 @@ export default function Header() {
         <nav className={styles.navegation}>
           <ul>
             {imagesPlanets.map((planet) => (
-              <Link key={planet.name} to={'/planets/' + planet.name}>
+              <Link key={planet.link} to={'/planets/' + planet.link}>
                 <li>
                   <p>{planet.name}</p>
                   <img src={planet.image} alt={planet.name} width={60} />
