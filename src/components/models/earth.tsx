@@ -5,7 +5,7 @@ import { Group, Object3DEventMap } from 'three';
 
 export function EarthModel(props: any) {
   const group = React.useRef<Group<Object3DEventMap> | null>(null);
-  const { nodes, materials } = useGLTF('https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/earth.glb');
+  const { nodes, materials } = useGLTF('https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/models/earth-Fpcb6iAqIqljKmd43hnTPUjcWGfyjR.glb');
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
@@ -50,4 +50,4 @@ export function EarthModel(props: any) {
   );
 }
 
-useGLTF.preload('https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/earth.glb');
+useGLTF.preload('https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/models/earth-Fpcb6iAqIqljKmd43hnTPUjcWGfyjR.glb');
