@@ -14,8 +14,8 @@ export default function HomePage() {
     >
       <ambientLight intensity={0} />
       <OrbitControls
-        minDistance={media > 1000 ? 4 : 10}
-        maxDistance={media > 1000 ? 6 : 12}
+        minDistance={media > 1000 ? 4 : 6}
+        maxDistance={media > 1000 ? 6 : 9}
         enableZoom={true}
         autoRotate={true}
         autoRotateSpeed={1}

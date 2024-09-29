@@ -11,13 +11,14 @@ import { JupiterModel } from '../../components/models/jupiter';
 import { SaturnModel } from '../../components/models/saturn';
 import { UranusModel } from '../../components/models/uranus';
 import { NeptuneModel } from '../../components/models/neptune';
-import { Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { usePlanetsContext } from '../../context/planets-context';
 import useMedia from '../../hooks/useMedia';
 
 export default function PlanetsPage() {
   const { id } = useParams<{ id: 'Sun' }>();
   const { planets, toggle } = usePlanetsContext();
+  const [openSummary, setOpenSummary] = React.useState(false);
   const media = useMedia();
 
   const models = {
@@ -45,40 +46,7 @@ export default function PlanetsPage() {
           {CurrentPlanetInfo?.name}
         </h1>{' '}
         {media <= 900 ? (
-          <details style={{ cursor: 'pointer' }}>
-            <summary>Mais informações</summary>
-            <p>{CurrentPlanetInfo?.description}</p>
-
-            <ul>
-              {CurrentPlanetInfo?.width && (
-                <li>Tamanho: {CurrentPlanetInfo?.width}</li>
-              )}
-              {CurrentPlanetInfo?.velocity && (
-                <li>Velocidade de rotação: {CurrentPlanetInfo?.velocity}</li>
-              )}
-              {CurrentPlanetInfo?.delayOfRotate && (
-                <li>Tempo de rotação: {CurrentPlanetInfo?.delayOfRotate}</li>
-              )}
-              {CurrentPlanetInfo?.delayOfTranslateForSun && (
-                <li>
-                  Tempo de translação:{' '}
-                  {CurrentPlanetInfo?.delayOfTranslateForSun}
-                </li>
-              )}
-              {CurrentPlanetInfo?.distanceOfEarth && (
-                <li>
-                  Distancia do planeta Terra:{' '}
-                  {CurrentPlanetInfo?.distanceOfEarth}
-                </li>
-              )}
-              {CurrentPlanetInfo?.delayOfTranslateForGalaxy && (
-                <li>
-                  Tempo de translação através da galaxia:{' '}
-                  {CurrentPlanetInfo?.delayOfTranslateForGalaxy}
-                </li>
-              )}
-            </ul>
-          </details>
+          ''
         ) : (
           <>
             <p>{CurrentPlanetInfo?.description}</p>
@@ -118,7 +86,8 @@ export default function PlanetsPage() {
         <Canvas
           style={{
             width: `${media <= 900 ? '90%' : '520px'}`,
-            height: `${media <= 900 ? '80%' : '100%'}`,
+            height: `${media <= 900 && openSummary ? '40%' : '85%'}`,
+            marginLeft: '10px',
             zIndex: `${toggle ? -1 : 1}`,
           }}
         >
@@ -128,12 +97,48 @@ export default function PlanetsPage() {
             autoRotate={true}
             autoRotateSpeed={2}
             enablePan={false}
-            maxDistance={media <= 900 ? 2 : 1.2}
-            minDistance={media <= 900 ? 1.8 : 1}
+            maxDistance={media <= 900 ? 1.6 : 1.2}
+            minDistance={media <= 900 ? 1.2 : 1}
           />
           {CurrentPlanetModel && <CurrentPlanetModel />}
         </Canvas>
       </Suspense>
+      {media <= 900 ? (
+        <details open={false} style={{ cursor: 'pointer' }}>
+          <summary onClick={() => setOpenSummary(!openSummary)}>Mais informações</summary>
+          <p>{CurrentPlanetInfo?.description}</p>
+
+          <ul>
+            {CurrentPlanetInfo?.width && (
+              <li>Tamanho: {CurrentPlanetInfo?.width}</li>
+            )}
+            {CurrentPlanetInfo?.velocity && (
+              <li>Velocidade de rotação: {CurrentPlanetInfo?.velocity}</li>
+            )}
+            {CurrentPlanetInfo?.delayOfRotate && (
+              <li>Tempo de rotação: {CurrentPlanetInfo?.delayOfRotate}</li>
+            )}
+            {CurrentPlanetInfo?.delayOfTranslateForSun && (
+              <li>
+                Tempo de translação: {CurrentPlanetInfo?.delayOfTranslateForSun}
+              </li>
+            )}
+            {CurrentPlanetInfo?.distanceOfEarth && (
+              <li>
+                Distancia do planeta Terra: {CurrentPlanetInfo?.distanceOfEarth}
+              </li>
+            )}
+            {CurrentPlanetInfo?.delayOfTranslateForGalaxy && (
+              <li>
+                Tempo de translação através da galaxia:{' '}
+                {CurrentPlanetInfo?.delayOfTranslateForGalaxy}
+              </li>
+            )}
+          </ul>
+        </details>
+      ) : (
+        ''
+      )}
     </section>
   );
 }

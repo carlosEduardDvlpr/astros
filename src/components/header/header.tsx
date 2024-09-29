@@ -42,7 +42,7 @@ export default function Header() {
         <nav className={styles.navegation}>
           <ul>
             {imagesPlanets.map((planet) => (
-              <Link key={planet.link} to={'/planets/' + planet.link}>
+              <Link onClick={handleToggle} key={planet.link} to={'/planets/' + planet.link}>
                 <li>
                   <p>{planet.name}</p>
                   <img src={planet.image} alt={planet.name} width={60} />
