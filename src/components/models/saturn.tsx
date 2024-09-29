@@ -5,7 +5,9 @@ import { useGLTF, useAnimations } from '@react-three/drei';
 
 export function SaturnModel(props) {
   const group = React.useRef();
-  const { nodes, materials, animations } = useGLTF('public/models/saturn.glb');
+  const { nodes, materials, animations } = useGLTF(
+    'https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/models/saturn-TWwnXenIitqqlzB6u6Bxd9DevPLdJc.glb',
+  );
   const { actions } = useAnimations(animations, group);
   return (
     <group ref={group} {...props} dispose={null}>
@@ -56,4 +58,6 @@ export function SaturnModel(props) {
   );
 }
 
-useGLTF.preload('public/models/saturn.glb');
+useGLTF.preload(
+  'https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/models/saturn-TWwnXenIitqqlzB6u6Bxd9DevPLdJc.glb',
+);
