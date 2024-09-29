@@ -7,7 +7,7 @@ import { useFrame } from '@react-three/fiber';
 export function SolarSystemModel(props) {
   const group = React.useRef();
   const { nodes, materials, animations } = useGLTF(
-    'https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/models/solar-system-iBQnOAJi1HKegCSMX2wYxIYrWd2gSt.glb',
+    'public/models/solar-system.glb',
   );
   const { actions } = useAnimations(animations, group);
 
@@ -318,6 +318,4 @@ export function SolarSystemModel(props) {
   );
 }
 
-useGLTF.preload(
-  'https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/models/solar-system-iBQnOAJi1HKegCSMX2wYxIYrWd2gSt.glb',
-);
+useGLTF.preload('public/models/solar-system.glb');
