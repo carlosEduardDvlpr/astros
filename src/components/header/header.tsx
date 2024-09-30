@@ -32,7 +32,11 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <Link to={'/'} style={{ textDecoration: 'none' }}>
+      <Link
+        to={'/'}
+        onClick={() => setToggle(false)}
+        style={{ textDecoration: 'none' }}
+      >
         <h1>Astros</h1>
       </Link>
       <button onClick={handleToggle}>
@@ -42,10 +46,14 @@ export default function Header() {
         <nav className={styles.navegation}>
           <ul>
             {imagesPlanets.map((planet) => (
-              <Link onClick={handleToggle} key={planet.link} to={'/planets/' + planet.link}>
+              <Link
+                onClick={handleToggle}
+                key={planet.link}
+                to={'/planets/' + planet.link}
+              >
                 <li>
                   <p>{planet.name}</p>
-                  <img src={planet.image} alt={planet.name} width={60} />
+                  <img src={planet.image} alt={planet.name} width={45} />
                 </li>
               </Link>
             ))}

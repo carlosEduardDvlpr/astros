@@ -30,7 +30,3 @@ main {
   align-items: center;
   height: calc(100vh - 70px);
 }
-
-.blocked {
-  display: none !important;
-}

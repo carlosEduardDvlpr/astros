@@ -29,7 +29,7 @@
   background-color: black;
   top: 70px;
   height: calc(100vh - 70px);
-  width: 250px;
+  width: 200px;
   border-left: 2px solid rgb(255, 255, 255);
   color: white;
   animation: open 0.1s linear;
@@ -43,7 +43,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 2rem;
-      padding: 1rem;
+      padding: .5rem 1rem;
       &:hover {
         cursor: pointer;
         background-color: rgb(26, 25, 25);

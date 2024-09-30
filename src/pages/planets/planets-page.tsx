@@ -39,12 +39,14 @@ export default function PlanetsPage() {
   return (
     <section className={styles.container}>
       <div className={styles.planets}>
-        <h1
-          style={{ color: `${CurrentPlanetInfo?.color}` }}
-          className={styles.planets_title}
-        >
-          {CurrentPlanetInfo?.name}
-        </h1>{' '}
+        {!openSummary && (
+          <h1
+            style={{ color: `${CurrentPlanetInfo?.color}` }}
+            className={styles.planets_title}
+          >
+            {CurrentPlanetInfo?.name}
+          </h1>
+        )}{' '}
         {media <= 900 ? (
           ''
         ) : (
@@ -86,7 +88,7 @@ export default function PlanetsPage() {
         <Canvas
           style={{
             width: `${media <= 900 ? '90%' : '520px'}`,
-            height: `${media <= 900 && openSummary ? '40%' : '85%'}`,
+            height: `${media <= 900 && openSummary ? '40%' : '70%'}`,
             marginLeft: '10px',
             zIndex: `${toggle ? -1 : 1}`,
           }}
@@ -97,15 +99,20 @@ export default function PlanetsPage() {
             autoRotate={true}
             autoRotateSpeed={2}
             enablePan={false}
-            maxDistance={media <= 900 ? 1.6 : 1.2}
-            minDistance={media <= 900 ? 1.2 : 1}
+            maxDistance={media <= 900 ? 1.5 : 1.2}
+            minDistance={media <= 900 ? 1.1 : 1}
           />
           {CurrentPlanetModel && <CurrentPlanetModel />}
         </Canvas>
       </Suspense>
       {media <= 900 ? (
         <details open={false} style={{ cursor: 'pointer' }}>
-          <summary onClick={() => setOpenSummary(!openSummary)}>Mais informações</summary>
+          <summary
+            onClick={() => setOpenSummary(!openSummary)}
+            style={{ color: CurrentPlanetInfo?.color }}
+          >
+            Mais informações
+          </summary>
           <p>{CurrentPlanetInfo?.description}</p>
 
           <ul>

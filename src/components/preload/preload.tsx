@@ -1,8 +1,8 @@
 import styles from './preload.module.css';
 
-export default function Preload({ className }: { className?: string }) {
+export default function Preload() {
   return (
-    <div className={`${styles.preload} ${className}`}>
+    <div className={`${styles.preload}`}>
       <p>Carregando sua experiência ...</p>
     </div>
   );
