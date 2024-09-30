@@ -3,8 +3,10 @@
 import React from 'react';
 import { useGLTF, useAnimations } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
+import { useNavigate } from 'react-router-dom';
 
 export function SolarSystemModel(props) {
+  const navigate = useNavigate();
   const group = React.useRef();
   const { nodes, materials, animations } = useGLTF(
     'https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/models/solar-system-iBQnOAJi1HKegCSMX2wYxIYrWd2gSt.glb',
@@ -112,6 +114,7 @@ export function SolarSystemModel(props) {
                   scale={74.656}
                 >
                   <group
+                    onClick={() => navigate('/planets/Neptune')}
                     name="Sphere_008"
                     position={[-0.756, -0.653, 0.011]}
                     rotation={[0, 0, 0.124]}
@@ -132,6 +135,7 @@ export function SolarSystemModel(props) {
                 >
                   <group
                     name="Sphere_007"
+                    onClick={() => navigate('/planets/Uranus')}
                     position={[-0.805, 0.597, 0.013]}
                     scale={0.02}
                   >
@@ -143,6 +147,7 @@ export function SolarSystemModel(props) {
                   </group>
                 </group>
                 <group
+                  onClick={() => navigate('/planets/Saturn')}
                   name="BezierCircle_006"
                   position={[0.016, -0.873, 0.083]}
                   rotation={[-Math.PI / 2, 0, 0]}
@@ -163,6 +168,7 @@ export function SolarSystemModel(props) {
                 </group>
                 <group
                   name="BezierCircle_005"
+                  onClick={() => navigate('/planets/Jupiter')}
                   position={[0.016, -0.873, 0.083]}
                   rotation={[-Math.PI / 2, 0, 0]}
                   scale={41.142}
@@ -181,6 +187,7 @@ export function SolarSystemModel(props) {
                   </group>
                 </group>
                 <group
+                  onClick={() => navigate('/planets/Mars')}
                   name="BezierCircle_004"
                   position={[0.016, -0.873, 0.083]}
                   rotation={[-Math.PI / 2, 0, 0]}
@@ -200,6 +207,7 @@ export function SolarSystemModel(props) {
                   </group>
                 </group>
                 <group
+                  onClick={() => navigate('/planets/Earth')}
                   name="BezierCircle_002"
                   position={[0.016, -0.873, 0.083]}
                   rotation={[-Math.PI / 2, 0, 0]}
@@ -237,6 +245,7 @@ export function SolarSystemModel(props) {
                   </group>
                 </group>
                 <group
+                  onClick={() => navigate('/planets/Venus')}
                   name="BezierCircle_001"
                   position={[0.016, -0.873, 0.083]}
                   rotation={[-Math.PI / 2, 0, 0]}
@@ -257,6 +266,7 @@ export function SolarSystemModel(props) {
                 </group>
                 <group
                   name="BezierCircle"
+                  onClick={() => navigate('/planets/Mercury')}
                   position={[0.016, -0.873, 0.083]}
                   rotation={[-Math.PI / 2, 0, 0]}
                   scale={11.745}
@@ -275,6 +285,9 @@ export function SolarSystemModel(props) {
                   </group>
                 </group>
                 <group
+                  onClick={() => {
+                    navigate('/planets/Sun');
+                  }}
                   name="Sphere_001"
                   position={[0.016, -0.873, 0.083]}
                   rotation={[-Math.PI / 2, 0, 0]}

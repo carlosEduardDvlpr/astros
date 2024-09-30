@@ -10,11 +10,11 @@ export default function HomePage() {
   return (
     <Canvas
       fallback={'Carregando modelo 3D..'}
-      style={{ zIndex: `${toggle ? -1 : 1}` }}
+      style={{ zIndex: `${toggle ? -1 : 1}`, cursor: 'pointer' }}
     >
-      <ambientLight intensity={0} />
+      <ambientLight intensity={1} />
       <OrbitControls
-        minDistance={media > 1000 ? 4 : 6.5}
+        minDistance={media > 1000 ? 2.5 : 2}
         maxDistance={media > 1000 ? 6 : 9}
         enableZoom={true}
         autoRotate={true}

@@ -6,10 +6,15 @@
   box-sizing: border-box;
   font-family: 'Oswald', sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 300;
+  letter-spacing: .1px;
   font-style: normal;
   color: inherit;
   transition: 0.3s;
+}
+
+h1{
+  font-weight: 500;
 }
 
 @keyframes bg {

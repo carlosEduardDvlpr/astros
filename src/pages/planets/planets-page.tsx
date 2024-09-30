@@ -98,12 +98,12 @@ export default function PlanetsPage() {
         <Canvas
           style={{
             width: `${media <= 900 ? '90%' : '520px'}`,
-            height: `${media <= 900 && openSummary ? '40%' : '70%'}`,
+            height: `${media <= 900 && openSummary ? '40%' : '75%'}`,
             marginLeft: '10px',
             zIndex: `${toggle ? -1 : 1}`,
           }}
         >
-          <ambientLight intensity={2} />
+          <ambientLight intensity={1.5} />
           <OrbitControls
             enableZoom={true}
             autoRotate={true}

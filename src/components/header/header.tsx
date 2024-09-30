@@ -60,7 +60,7 @@ export default function Header() {
           <VolumeOff cursor={'pointer'} onClick={handleAudioPlay} />
         )}
 
-        <audio ref={audioRef} autoPlay loop>
+        <audio ref={audioRef} loop>
           <source src="https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/msuic-HxjhyPsVRfqOArU7YjcQyh2SUHrkyG.mp3" />
         </audio>
         <button onClick={handleToggle}>
