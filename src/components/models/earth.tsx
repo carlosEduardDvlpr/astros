@@ -1,53 +1,18 @@
 // @ts-nocheck
-import React from 'react';
 import { useGLTF } from '@react-three/drei';
-import { Group, Object3DEventMap } from 'three';
 
-export function EarthModel(props: any) {
-  const group = React.useRef<Group<Object3DEventMap> | null>(null);
-  const { nodes, materials } = useGLTF('https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/models/earth-Fpcb6iAqIqljKmd43hnTPUjcWGfyjR.glb');
+export function EarthModel(props) {
+  const { nodes, materials } = useGLTF('https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/models/earth2-kG8sPcSiLSakIAplHoEaZQ4WRtz0kz.glb');
   return (
-    <group ref={group} {...props} dispose={null}>
-      <group name="Sketchfab_Scene">
-        <group
-          name="Sketchfab_model"
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={0.005}
-        >
-          <group
-            name="fc09fa6deb6c45f687e724438fed81adfbx"
-            rotation={[Math.PI / 2, 0, 0]}
-          >
-            <group name="Object_2">
-              <group name="RootNode">
-                <group
-                  name="Earth"
-                  rotation={[-Math.PI / 2, 0, 0]}
-                  scale={57.393}
-                >
-                  <mesh
-                    name="Earth_Earth_0"
-                    geometry={nodes.Earth_Earth_0.geometry}
-                    material={materials.Earth}
-                  />
-                  <mesh
-                    name="Earth_Earth_0_1"
-                    geometry={nodes.Earth_Earth_0_1.geometry}
-                    material={materials.Earth}
-                  />
-                  <mesh
-                    name="Earth_Earth_0_2"
-                    geometry={nodes.Earth_Earth_0_2.geometry}
-                    material={materials.Earth}
-                  />
-                </group>
-              </group>
-            </group>
-          </group>
-        </group>
-      </group>
+    <group {...props} dispose={null}>
+      <mesh
+        geometry={nodes.Object_4.geometry}
+        material={materials['Scene_-_Root']}
+        scale={0.5}
+        position={[0, 0, 0]}
+      />
     </group>
   );
 }
 
-useGLTF.preload('https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/models/earth-Fpcb6iAqIqljKmd43hnTPUjcWGfyjR.glb');
+useGLTF.preload('https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/models/earth2-kG8sPcSiLSakIAplHoEaZQ4WRtz0kz.glb');

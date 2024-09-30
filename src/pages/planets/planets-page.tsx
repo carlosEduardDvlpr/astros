@@ -100,7 +100,7 @@ export default function PlanetsPage() {
             autoRotateSpeed={2}
             enablePan={false}
             maxDistance={media <= 900 ? 1.5 : 1.2}
-            minDistance={media <= 900 ? 1.1 : 1}
+            minDistance={media <= 900 ? 1.1 : 0.9}
           />
           {CurrentPlanetModel && <CurrentPlanetModel />}
         </Canvas>
