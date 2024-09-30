@@ -1,20 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
-  letter-spacing: .1px;
   font-style: normal;
   color: inherit;
   transition: 0.3s;
 }
 
-h1{
+h1 {
+  font-family: 'Oswald', sans-serif;
   font-weight: 500;
+  letter-spacing: 0.1px;
 }
 
 @keyframes bg {
