@@ -19,7 +19,7 @@ export default function HomePage() {
         enableZoom={true}
         autoRotate={true}
         autoRotateSpeed={1}
-        enablePan={false}
+        // enablePan={false}
       />
       <SolarSystemModel />
     </Canvas>
