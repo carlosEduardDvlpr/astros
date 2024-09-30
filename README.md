@@ -27,8 +27,8 @@ Para os icones da page, utilizei a biblioteca `Lucide-React`;
 
 ## Interface do Projeto:
 
-![image]([https://i.ibb.co/yf697c7/Captura-de-tela-2024-09-30-172500.png](https://i.ibb.co/ng7GtNt/Captura-de-tela-2024-09-30-172500.png))
-![image]([https://i.ibb.co/PhYFk7d/Captura-de-tela-2024-09-30-172521.png](https://i.ibb.co/QNcp024/Captura-de-tela-2024-09-30-172521.png))
+![image](https://i.ibb.co/ng7GtNt/Captura-de-tela-2024-09-30-172500.png)
+![image](https://i.ibb.co/QNcp024/Captura-de-tela-2024-09-30-172521.png)
 
 
 ## Considerações finais
