@@ -11,8 +11,15 @@
   }
   h1 {
     font-size: 35px;
+    position: fixed;
+    top: -80px;
+    left: -24px;
     margin-left: 1.5rem;
     margin-top: 1rem;
+    @media (max-width: 900px) {
+      top: 0;
+      left: 0;
+    }
   }
 
   details {
@@ -54,8 +61,4 @@ summary {
 ul {
   margin-left: 1rem;
   margin-top: 10px;
-}
-
-.planets_title {
-  font-size: 2rem;
 }

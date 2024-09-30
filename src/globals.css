@@ -12,11 +12,24 @@
   transition: 0.3s;
 }
 
+@keyframes bg {
+  0% {
+    background-position: -100vw;
+  }
+  50% {
+    background-position: 100vw;
+  }
+  100% {
+    background-position: -100vw;
+  }
+}
+
 body {
   background-image: url(/assets/background.jpg);
   background-repeat: repeat;
-  background-size: cover;
-  color: white;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  animation: infinite bg 600s linear;
 }
 
 button {

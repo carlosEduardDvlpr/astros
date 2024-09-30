@@ -7,6 +7,11 @@
   box-shadow: 0 0.1px 10px rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
+  div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
   button {
     font-size: 1rem;
     &:hover {
@@ -23,7 +28,7 @@
 
 .navegation {
   position: fixed;
-  z-index: 2 !important;
+  z-index: 9999 !important;
   right: 0;
   overflow: auto;
   background-color: black;

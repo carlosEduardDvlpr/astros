@@ -19,6 +19,7 @@ export default function PlanetsPage() {
   const { id } = useParams<{ id: 'Sun' }>();
   const { planets, toggle } = usePlanetsContext();
   const [openSummary, setOpenSummary] = React.useState(false);
+  const [rotate, setRotate] = React.useState(1);
   const media = useMedia();
 
   const models = {
@@ -81,6 +82,15 @@ export default function PlanetsPage() {
                 </li>
               )}
             </ul>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <span>Velocidade da animação: {rotate}</span>{' '}
+              <input
+                type="range"
+                value={rotate}
+                style={{ accentColor: CurrentPlanetInfo?.color }}
+                onChange={(e) => setRotate(+e.currentTarget.value)}
+              />
+            </div>
           </>
         )}
       </div>
@@ -97,7 +107,7 @@ export default function PlanetsPage() {
           <OrbitControls
             enableZoom={true}
             autoRotate={true}
-            autoRotateSpeed={2}
+            autoRotateSpeed={rotate}
             enablePan={false}
             maxDistance={media <= 900 ? 1.5 : 1.2}
             minDistance={media <= 900 ? 1.1 : 0.9}
@@ -107,6 +117,22 @@ export default function PlanetsPage() {
       </Suspense>
       {media <= 900 ? (
         <details open={false} style={{ cursor: 'pointer' }}>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1rem',
+              marginBottom: '1rem',
+            }}
+          >
+            <span>Velocidade da animação: {rotate}</span>{' '}
+            <input
+              type="range"
+              value={rotate}
+              style={{ accentColor: CurrentPlanetInfo?.color }}
+              onChange={(e) => setRotate(+e.currentTarget.value)}
+            />
+          </div>
           <summary
             onClick={() => setOpenSummary(!openSummary)}
             style={{ color: CurrentPlanetInfo?.color }}
@@ -149,3 +175,4 @@ export default function PlanetsPage() {
     </section>
   );
 }
+<input type="range" name="" id="" />;

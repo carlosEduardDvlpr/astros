@@ -10,6 +10,8 @@ import neptuneImage from '../../assets/planets/neptune.png';
 import styles from './header.module.css';
 import { Link } from 'react-router-dom';
 import { usePlanetsContext } from '../../context/planets-context';
+import { Volume2, VolumeOff } from 'lucide-react';
+import React from 'react';
 
 const imagesPlanets = [
   { link: 'Sun', name: 'Sol', image: sunImage },
@@ -25,6 +27,18 @@ const imagesPlanets = [
 
 export default function Header() {
   const { setToggle, toggle } = usePlanetsContext();
+  const [play, setPlay] = React.useState(false);
+  const audioRef = React.useRef<HTMLAudioElement>(null);
+
+  function handleAudioPause() {
+    audioRef.current?.pause();
+    setPlay(false);
+  }
+
+  function handleAudioPlay() {
+    audioRef.current?.play();
+    setPlay(true);
+  }
 
   function handleToggle() {
     setToggle(!toggle);
@@ -39,9 +53,21 @@ export default function Header() {
       >
         <h1>Astros</h1>
       </Link>
-      <button onClick={handleToggle}>
-        {toggle ? 'Ver menos...' : 'Ver todos os planetas'}
-      </button>
+      <div>
+        {play ? (
+          <Volume2 cursor={'pointer'} onClick={handleAudioPause} />
+        ) : (
+          <VolumeOff cursor={'pointer'} onClick={handleAudioPlay} />
+        )}
+
+        <audio ref={audioRef}>
+          <source src="https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/msuic-HxjhyPsVRfqOArU7YjcQyh2SUHrkyG.mp3" />
+        </audio>
+        <button onClick={handleToggle}>
+          {toggle ? 'Ver menos...' : 'Ver todos os planetas'}
+        </button>
+      </div>
+
       {toggle && (
         <nav className={styles.navegation}>
           <ul>
