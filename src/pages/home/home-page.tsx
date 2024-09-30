@@ -14,12 +14,12 @@ export default function HomePage() {
     >
       <ambientLight intensity={1} />
       <OrbitControls
-        minDistance={media > 1000 ? 2.5 : 2}
+        minDistance={media > 1000 ? 2.5 : 3}
         maxDistance={media > 1000 ? 6 : 9}
         enableZoom={true}
         autoRotate={true}
         autoRotateSpeed={1}
-        // enablePan={false}
+        enablePan={false}
       />
       <SolarSystemModel />
     </Canvas>
