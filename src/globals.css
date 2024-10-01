@@ -13,6 +13,17 @@
   transition: 0.3s;
 }
 
+.initial {
+  animation: fadeDisplay .5s linear forwards;
+}
+
+@keyframes fadeDisplay {
+  100%{
+    opacity: 0;
+    display: none;
+  }
+}
+
 h1 {
   font-family: 'Oswald', sans-serif;
   font-weight: 500;

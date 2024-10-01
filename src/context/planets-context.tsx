@@ -10,6 +10,7 @@ export const usePlanetsContext = () => {
     planets: PlanetsInterface;
     toggle: boolean;
     setToggle: React.Dispatch<React.SetStateAction<boolean>>;
+    audioRef: React.RefObject<HTMLAudioElement>;
   };
 };
 
@@ -19,9 +20,11 @@ export default function PlanetsProvider({
   children: React.ReactNode;
 }) {
   const [toggle, setToggle] = React.useState(false);
+  const audioRef = React.useRef<HTMLAudioElement>(null);
+
   return (
     <PlanetsContext.Provider
-      value={{ planets: planetsInfo, toggle, setToggle }}
+      value={{ planets: planetsInfo, toggle, setToggle, audioRef }}
     >
       {children}
     </PlanetsContext.Provider>

@@ -1,9 +1,12 @@
-import { Link } from 'react-router-dom';
-
 export default function ErrorPage() {
   return (
     <main style={{ justifyContent: 'center' }}>
-      <Link to={'/'}>Voltar para home</Link>
+      <button
+        style={{ textDecoration: 'underline', fontSize: '20px', cursor: 'pointer' }}
+        onClick={() => (window.location.href = '/')}
+      >
+        Voltar para home
+      </button>
     </main>
   );
 }
