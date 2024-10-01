@@ -12,9 +12,8 @@ export default function Preload() {
   }
 
   React.useEffect(() => {
-    setInit(false);
-    window.addEventListener('load', handleSetInit);
-    return () => window.removeEventListener('load', handleSetInit);
+  setInit(false)
+  setTimeout(handleSetInit, 2000)
   }, []);
 
   return (
