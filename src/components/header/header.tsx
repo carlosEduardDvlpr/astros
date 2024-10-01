@@ -26,9 +26,8 @@ const imagesPlanets = [
 ];
 
 export default function Header() {
-  const { setToggle, toggle } = usePlanetsContext();
-  const [play, setPlay] = React.useState(false);
-  const audioRef = React.useRef<HTMLAudioElement>(null);
+  const [play, setPlay] = React.useState(true);
+  const { setToggle, toggle, audioRef } = usePlanetsContext();
 
   function handleAudioPause() {
     audioRef.current?.pause();
