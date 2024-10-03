@@ -9,8 +9,8 @@ export function SolarSystemModel(props) {
   const navigate = useNavigate();
   const group = React.useRef();
   const { nodes, materials, animations } = useGLTF(
-    'https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/models/solar-system-iBQnOAJi1HKegCSMX2wYxIYrWd2gSt.glb',
-  );
+    'https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/solar-system.glb'
+    );
   const { actions } = useAnimations(animations, group);
 
   return (
@@ -332,5 +332,5 @@ export function SolarSystemModel(props) {
 }
 
 useGLTF.preload(
-  'https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/models/solar-system-iBQnOAJi1HKegCSMX2wYxIYrWd2gSt.glb',
+  'https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/solar-system.glb'
 );
