@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei';
 
 export function UranusModel(props) {
   const { nodes, materials } = useGLTF(
-    'https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/models/uranus-BImJAgshUCXM1xD2DsAMxNTj5Nn1kO.glb',
+    'https://impmjmvcachyhjcjnyjv.supabase.co/storage/v1/object/public/astros/uranus.glb',
   );
   return (
     <group {...props} dispose={null}>
@@ -22,5 +22,5 @@ export function UranusModel(props) {
 }
 
 useGLTF.preload(
-  'https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/models/uranus-BImJAgshUCXM1xD2DsAMxNTj5Nn1kO.glb',
+  'https://impmjmvcachyhjcjnyjv.supabase.co/storage/v1/object/public/astros/uranus.glb',
 );
