@@ -6,7 +6,7 @@ import { useGLTF, useAnimations } from '@react-three/drei';
 export function SunModel(props) {
   const group = React.useRef();
   const { nodes, materials, animations } = useGLTF(
-    'https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/models/sun-ZYFvlAxJqm8qkzN8j6yKjLm7Dx6AZO.glb',
+    'https://impmjmvcachyhjcjnyjv.supabase.co/storage/v1/object/public/astros/sun.glb',
   );
   const { actions } = useAnimations(animations, group);
   return (
@@ -49,5 +49,5 @@ export function SunModel(props) {
 }
 
 useGLTF.preload(
-  'https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/models/sun-ZYFvlAxJqm8qkzN8j6yKjLm7Dx6AZO.glb',
+  'https://impmjmvcachyhjcjnyjv.supabase.co/storage/v1/object/public/astros/sun.glb',
 );
