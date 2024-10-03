@@ -2,7 +2,7 @@
 import { useGLTF } from '@react-three/drei';
 
 export function EarthModel(props) {
-  const { nodes, materials } = useGLTF('https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/models/earth2-kG8sPcSiLSakIAplHoEaZQ4WRtz0kz.glb');
+  const { nodes, materials } = useGLTF('https://impmjmvcachyhjcjnyjv.supabase.co/storage/v1/object/public/astros/earth.glb');
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -15,4 +15,4 @@ export function EarthModel(props) {
   );
 }
 
-useGLTF.preload('https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/models/earth2-kG8sPcSiLSakIAplHoEaZQ4WRtz0kz.glb');
+useGLTF.preload('https://impmjmvcachyhjcjnyjv.supabase.co/storage/v1/object/public/astros/earth.glb');
