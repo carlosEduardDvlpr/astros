@@ -9,7 +9,7 @@ export function SolarSystemModel(props) {
   const navigate = useNavigate();
   const group = React.useRef();
   const { nodes, materials, animations } = useGLTF(
-    'https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/solar-system.glb'
+    'https://github.com/carlosEduardDvlpr/astros/raw/refs/heads/master/public/models/solar-system.glb'
     );
   const { actions } = useAnimations(animations, group);
 
@@ -332,5 +332,5 @@ export function SolarSystemModel(props) {
 }
 
 useGLTF.preload(
-  'https://github.com/carlosEduardDvlpr/astros/blob/master/public/models/solar-system.glb'
+  'https://github.com/carlosEduardDvlpr/astros/raw/refs/heads/master/public/models/solar-system.glb'
 );
