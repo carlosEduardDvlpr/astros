@@ -60,7 +60,7 @@ export default function Header() {
         )}
 
         <audio ref={audioRef} loop>
-          <source src="https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/msuic-HxjhyPsVRfqOArU7YjcQyh2SUHrkyG.mp3" />
+          <source src="https://impmjmvcachyhjcjnyjv.supabase.co/storage/v1/object/public/astros/music.mp3?t=2024-10-03T15%3A58%3A37.089Z" />
         </audio>
         <button onClick={handleToggle}>
           {toggle ? 'Ver menos...' : 'Ver todos os planetas'}
