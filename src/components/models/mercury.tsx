@@ -6,7 +6,7 @@ import { useGLTF, useAnimations } from '@react-three/drei';
 export function MercuryModel(props) {
   const group = React.useRef();
   const { nodes, materials, animations } = useGLTF(
-    'https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/models/mercury-Lihk95yjiU9g1MedmgCjhX9zmDuxdw.glb',
+    'https://impmjmvcachyhjcjnyjv.supabase.co/storage/v1/object/public/astros/mercury.glb',
   );
   const { actions } = useAnimations(animations, group);
   return (
@@ -46,5 +46,5 @@ export function MercuryModel(props) {
 }
 
 useGLTF.preload(
-  'https://ru4gn9ssr2slv8io.public.blob.vercel-storage.com/models/mercury-Lihk95yjiU9g1MedmgCjhX9zmDuxdw.glb',
+  'https://impmjmvcachyhjcjnyjv.supabase.co/storage/v1/object/public/astros/mercury.glb',
 );
